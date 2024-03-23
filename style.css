@@ -11,6 +11,7 @@ body {
   width: 100%;
   top: -10%;
   animation: loadIn 1.8s linear forwards;
+  z-index: 1;
 }
 
 .subjectimg {
@@ -18,6 +19,37 @@ body {
   width: 100%;
   position: fixed;
   animation: loadOut 1.8s linear forwards;
+  z-index: 1;
+}
+
+main div {
+  display: flex;
+  opacity: 0;
+  position: fixed;
+  margin-left: 50%;
+  animation: contentShift 1.8s linear forwards;
+  z-index: 2;
+  background-color: white;
+  min-width: 50%;
+  min-height: 100%;
+}
+
+@keyframes contentShift {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes loadIn {
@@ -31,7 +63,8 @@ body {
   }
 
   100% {
-    left: -50%;
+    left: -18%;
+    scale: 130%;
   }
 }
 
@@ -49,9 +82,4 @@ body {
     left: -25%;
     scale: 90%;
   }
-}
-
-main div {
-  display: flex;
-  margin-left: 50%;
 }
