@@ -1,0 +1,57 @@
+body {
+  margin: 0px;
+}
+
+.loading-div {
+  overflow: hidden;
+}
+
+.backgroundimg {
+  position: fixed;
+  width: 100%;
+  top: -10%;
+  animation: loadIn 1.8s linear forwards;
+}
+
+.subjectimg {
+  margin: auto;
+  width: 100%;
+  position: fixed;
+  animation: loadOut 1.8s linear forwards;
+}
+
+@keyframes loadIn {
+  0% {
+    scale: 120%;
+  }
+
+  83.3% {
+    scale: 130%;
+    left: 0%;
+  }
+
+  100% {
+    left: -50%;
+  }
+}
+
+@keyframes loadOut {
+  0% {
+    scale: 100%;
+  }
+
+  83.3% {
+    scale: 90%;
+    left: 0%;
+  }
+
+  100% {
+    left: -25%;
+    scale: 90%;
+  }
+}
+
+main div {
+  display: flex;
+  margin-left: 50%;
+}
