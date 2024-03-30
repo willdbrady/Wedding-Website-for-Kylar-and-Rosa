@@ -1,85 +1,161 @@
 body {
   margin: 0px;
+
 }
 
-.loading-div {
-  overflow: hidden;
-}
 
-.backgroundimg {
-  position: fixed;
-  width: 100%;
-  top: -10%;
-  animation: loadIn 1.8s linear forwards;
-  z-index: 1;
-}
+@media (min-width: 320px) {
+  .backgroundimg {
+    position: fixed;
+    height: 100%;
+    top: -10%;
+    animation: loadIn 1.8s linear forwards;
+  }
 
-.subjectimg {
-  margin: auto;
-  width: 100%;
-  position: fixed;
-  animation: loadOut 1.8s linear forwards;
-  z-index: 1;
-}
+  .subjectimg {
+    margin: auto;
+    height: 100%;
+    position: fixed;
+    animation: loadOut 1.8s linear forwards;
+  }
 
-main div {
-  display: flex;
-  opacity: 0;
-  position: fixed;
-  margin-left: 50%;
-  animation: contentShift 1.8s linear forwards;
-  z-index: 2;
-  background-color: white;
-  min-width: 50%;
-  min-height: 100%;
-}
-
-@keyframes contentShift {
-  0% {
+  main div {
+    display: flex;
     opacity: 0;
+    position: fixed;
+    animation: contentShift 1.8s linear forwards;
+    background-color: white;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 1rem;
   }
 
-  90% {
-    opacity: 0;
+
+
+  @keyframes contentShift {
+    0% {
+      opacity: 0;
+    }
+
+    95% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
-  95% {
-    opacity: 0;
+  @keyframes loadIn {
+    0% {
+      scale: 120%;
+    }
+
+    83.3% {
+      scale: 130%;
+      left: 0%;
+    }
+
+    100% {
+      left: -18%;
+      scale: 130%;
+    }
   }
 
-  100% {
-    opacity: 1;
+  @keyframes loadOut {
+    0% {
+      scale: 100%;
+    }
+
+    83.3% {
+      scale: 90%;
+      left: 0%;
+    }
+
+    100% {
+      left: -25%;
+      scale: 90%;
+    }
   }
 }
 
-@keyframes loadIn {
-  0% {
-    scale: 120%;
+@media screen and (min-width:1920px) {
+  .backgroundimg {
+    position: fixed;
+    width: 100%;
+    top: -10%;
+    animation: loadIn 1.8s linear forwards;
   }
 
-  83.3% {
-    scale: 130%;
-    left: 0%;
+  .subjectimg {
+    margin: auto;
+    width: 100%;
+    position: fixed;
+    animation: loadOut 1.8s linear forwards;
   }
 
-  100% {
-    left: -18%;
-    scale: 130%;
-  }
-}
-
-@keyframes loadOut {
-  0% {
-    scale: 100%;
-  }
-
-  83.3% {
-    scale: 90%;
-    left: 0%;
+  main div {
+    display: flex;
+    opacity: 0;
+    position: fixed;
+    margin-left: 50%;
+    animation: contentShift 1.8s linear forwards;
+    background-color: white;
+    min-width: 50%;
+    min-height: 100%;
+    padding: 1rem;
   }
 
-  100% {
-    left: -25%;
-    scale: 90%;
+
+
+  @keyframes contentShift {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    95% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
+
+  @keyframes loadIn {
+    0% {
+      scale: 120%;
+    }
+
+    83.3% {
+      scale: 130%;
+      left: 0%;
+    }
+
+    100% {
+      left: -18%;
+      scale: 130%;
+    }
+  }
+
+  @keyframes loadOut {
+    0% {
+      scale: 110%;
+    }
+
+    83.3% {
+      scale: 100%;
+      left: 0%;
+    }
+
+    100% {
+      left: -25%;
+      scale: 100%;
+    }
+  }
+
 }
