@@ -1,0 +1,809 @@
+.contentdiv {
+  display: flex;
+  margin-left: 50%;
+  align-items: center;
+  display: inline;
+  text-align: center;
+  margin-top: 0px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #ff519f;
+  min-height: 100vh;
+  margin-top: 0px;
+}
+
+.heronames {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./assets/Cloudsbg.webp);
+  background-size: contain 100vh 100vw;
+  background-position: 0 -110px;
+  margin-top: -18px;
+  scroll-snap-align: start;
+}
+
+p,
+span,
+h1,
+button,
+li {
+  font-family: alegreya sans;
+}
+
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-shadow: none;
+  overflow-x: hidden;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+
+}
+
+.container {
+  color: #333;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.container h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.container li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.container li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.rsvp-button {
+  color: #333;
+  background-color: #ffffff;
+  font-family: alegreya sans;
+  font-size: 2rem;
+  padding: 1.5rem;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border-radius: 2rem;
+}
+
+.names {
+  font-family: bad script;
+  font-size: 5rem;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.201);
+  padding: 3rem;
+  border-radius: 5rem;
+}
+
+.nameswrapper {
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  margin: auto;
+  width: 100vw;
+}
+
+/* NAV CSS SECTION */
+
+nav {
+  height: 80px;
+  display: flex;
+  width: 100%;
+}
+
+.nav-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.navul {
+  padding-top: 1rem;
+  padding-bottom: 6rem;
+  list-style: none;
+  color: white;
+  height: 80px;
+  width: 100%;
+}
+
+.navhead {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.201);
+}
+
+.navli {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.navli a {
+  text-decoration: none;
+}
+
+.navwrapper {
+  display: block;
+}
+
+/* slide section */
+.slide {
+  display: inline-block;
+  position: fixed;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 90vh;
+  z-index: -1;
+  top: -100vh;
+  background-color: #0a0a0a79;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+#rsvpslide.open,
+#slide.open {
+  transform: translateY(105vh) translateY(80px);
+  z-index: 10;
+}
+
+.slide li {
+  padding-left: 0px;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+
+.slide a {
+  color: white;
+  font-family: alegreya sans;
+  font-size: 3rem;
+}
+
+.slide ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.frstbar,
+.scndbar,
+.thrdbar {
+  transition: all 0.35s linear;
+  transform: rotate(0deg);
+  transform-origin: 16.5% 50%;
+}
+
+#burgericon.open .frstbar {
+  transform: rotate(45deg);
+}
+
+#burgericon.open .thrdbar {
+  transform: rotate(-45deg);
+}
+
+#burgericon.open .scndbar {
+  opacity: 0;
+}
+
+.rsvpslide {
+  width: 74vw;
+  height: 74vh;
+  border-radius: 5rem;
+  background-color: white;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  top: -100vh;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.rsvpsection {
+  font-family: alegreya sans;
+  width: 37vw;
+}
+
+.rsvpsection:nth-child(1) {
+  border-right: 2px solid #000;
+}
+
+.rsvpsection:nth-child(2) {
+  border-left: 2px solid #000;
+}
+
+.rsvpslidetitle {
+  font-family: bad script;
+  font-size: 5rem;
+}
+
+.rsvpslideinfo {
+  font-size: 3rem;
+}
+
+.divider {
+  width: 75%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rsvpa {
+  text-decoration: none;
+  color: black;
+  border: 2px solid;
+  border-radius: 2rem;
+  border-width: 4px;
+  padding: 1rem;
+  font-size: 3rem;
+  display: inline-block;
+}
+
+/* engagement section (not including the countdown timer) */
+
+.engagement-section {
+  height: 100vh;
+  background-image: url(./assets/Cloudsbg.webp);
+  background-size: cover;
+  display: flex;
+  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+}
+
+.eswrapper {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.201);
+  border-radius: 5rem;
+  color: white;
+  flex-direction: column;
+}
+
+.sidebyside {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border-right: 2px solid #ffffff;
+}
+
+
+.ersvp p {
+  padding: .5rem;
+  font-size: 1.1rem;
+}
+
+.submitbutton {
+  padding: .3rem;
+  margin: .5rem;
+}
+
+.thankyoumessage {
+  display: none;
+}
+
+.einfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+
+/* wedding section */
+.weddingsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: alegreya sans;
+}
+
+.wswrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.weddinghalf h1 {
+  width: 10%;
+}
+
+.weddinghalf {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.weddinghalf:nth-child(1) {
+  border-right: 2px solid #ffffff;
+}
+
+.weddinghald:nth-child(2) {
+  border-left: 2px solid #ffffff;
+}
+
+/* photo gallery section */
+
+.photosection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: alegreya sans;
+}
+
+.photosection h1 {
+  margin: 3rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 3rem;
+}
+
+.pswrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.gallery {
+  height: 75%;
+  width: 94%;
+  background-color: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memories {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3rem;
+  color: rgb(129, 103, 72);
+  text-shadow: rgba(182, 150, 112, 0.5) 0px 0px 8px;
+  animation: flickerAnimation 5s infinite;
+  text-shadow: 0px 0px 8px rgba(182, 150, 112, 0.5);
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0.3;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0.9;
+  }
+
+  70% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* this small snippet deals with background images for final 2 sections */
+.weddingsection,
+.photosection {
+  background-image: url(./assets/leaves.webp);
+  background-repeat: repeat;
+}
+
+.weddingsection {
+  background-position-y: 320px;
+}
+
+/* footer section */
+footer {
+  background-color: #0a0a0a;
+  color: white;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+    font-size: .5rem;
+}
+
+/* clouds section */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+.cloudsdiv {
+  position: absolute;
+  width: 100vw;
+}
+
+.cloud {
+  position: absolute;
+  transition: ease-in;
+  animation: clouddivider 5s infinite linear;
+  animation-delay: 0ms;
+}
+
+.cloud:nth-child(1) {
+  top: -15vh;
+  width: 25vw;
+  left: 10vw;
+}
+
+.cloud:nth-child(2) {
+  width: 70vw;
+  top: -40vh;
+  left: 0vw;
+}
+
+.cloud:nth-child(3) {
+  width: 50vw;
+  top: -15vh;
+  left: 50vw;
+}
+
+.cloud:nth-child(4) {
+  width: 35vw;
+  top: -15vh;
+  left: 35vw;
+}
+
+.cloud:nth-child(5) {
+  width: 30vw;
+  top: -15vh;
+  left: 30vw;
+}
+
+.cloud:nth-child(6) {
+  width: 30vw;
+  top: -15vh;
+  left: 75vw;
+}
+
+.cloud:nth-child(7) {
+  width: 30vw;
+  top: -15vh;
+  left: 75vw;
+}
+
+.cloud:nth-child(8) {
+  width: 30vw;
+  top: -15vh;
+  left: 65vw;
+}
+
+.cloud:nth-child(9) {
+  width: 30vw;
+  top: -15vh;
+  left: 60vw;
+}
+
+.cloud:nth-child(10) {
+  width: 25vw;
+  top: -10vh;
+  left: -7vw;
+}
+
+.cloud:nth-child(11) {
+  top: -15vh;
+  width: 25vw;
+  left: -90vw;
+}
+
+.cloud:nth-child(12) {
+  width: 70vw;
+  top: -40vh;
+  left: -100vw;
+}
+
+.cloud:nth-child(13) {
+  width: 50vw;
+  top: -15vh;
+  left: -50vw;
+}
+
+.cloud:nth-child(14) {
+  width: 35vw;
+  top: -15vh;
+  left: -65vw;
+}
+
+.cloud:nth-child(15) {
+  width: 30vw;
+  top: -15vh;
+  left: -70vw;
+}
+
+.cloud:nth-child(16) {
+  width: 30vw;
+  top: -15vh;
+  left: -25vw;
+}
+
+.cloud:nth-child(17) {
+  width: 30vw;
+  top: -15vh;
+  left: -25vw;
+}
+
+.cloud:nth-child(18) {
+  width: 30vw;
+  top: -15vh;
+  left: -35vw;
+}
+
+.cloud:nth-child(19) {
+  width: 30vw;
+  top: -15vh;
+  left: -40vw;
+}
+
+.cloud:nth-child(20) {
+  width: 25vw;
+  top: -10vh;
+  left: -107vw;
+}
+
+@keyframes clouddivider {
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+
+/* ------------------- RESPONSIVE STUFF BELOW ------------------- */
+
+/* 1478 W to fix RSVP Menu item sizes */
+
+@media screen and (max-width: 1478px) {
+  .rsvpslidetitle {
+    font-size: 3rem;
+  }
+
+  .rsvpslideinfo {
+    font-size: 1.5rem;
+  }
+
+  .rsvpa {
+    font-size: 2rem;
+    padding: .5rem;
+  }
+
+  .pswrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery {
+    width: 75%;
+  }
+
+}
+
+/* 892 W to fix RSVP menu item sizes again AND to fix ERSVP section*/
+
+@media screen and (max-width: 892px) {
+  .rsvpsection:nth-child(1) {
+    border-right: 2px solid #ffffff;
+  }
+
+  .rsvpsection:nth-child(2) {
+    border-left: 2px solid #ffffff;
+  }
+
+  .rsvpslide {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container ul li span {
+    font-size: 1.5rem;
+  }
+
+  .einfo {
+    font-size: 1.1rem;
+  }
+
+}
+
+/* 650 W to fix RSVP menu item sizes YET AGAIN */
+
+@media screen and (max-width: 650px) {
+  .divider {
+    display: none;
+  }
+}
+
+/* 447 W to fix RSVP menu final time */
+
+@media screen and (max-width: 447px) {
+  .rsvpa {
+    font-size: 1rem;
+  }
+
+  .rsvpsection {
+    width: 50vw;
+  }
+
+  .rsvpslidetitle {
+    font-size: 2rem;
+  }
+}
+
+/* 1332 W to fix heights of ERSVP section */
+
+@media screen and (max-width: 1332px) {
+  .container ul li span {
+    font-size: 2rem;
+  }
+
+  .einfo {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .container ul li {
+    font-size: 1.1rem;
+  }
+
+  .einfo {
+    font-size: 1rem;
+  }
+}
+
+/* 768 W to accomadate for mobile viewing (making flexbox column) */
+
+@media screen and (max-width: 768px) {
+  .sidebyside {
+    flex-direction: column;
+  }
+
+  .container {
+    border-right: 0px;
+  }
+
+  .eswrapper {
+    height: 95vh;
+  }
+
+  .einfo {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .gallery p {
+    font-size: 1.5rem;
+  }
+  .engagement-section {
+    height: 140vh;
+  }
+
+  .engagement-section .eswrapper {
+    height: 135vh;
+  }
+}
+
+/* continuing mobile proofing */
+
+@media screen and (max-width: 535px) {
+  #headline {
+    font-size: 1rem;
+  }
+
+  .container ul li {
+    font-size: 1rem;
+  }
+
+  .einfo {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 579px) {
+  .engagement-section {
+    height: 180vh;
+  }
+
+  .engagement-section .eswrapper {
+    height: 170vh;
+  }
+
+  .weddingsection {
+    height: 65vh;
+  }
+
+  .weddingsection .wswrapper {
+    height: 50%;
+  }
+}
