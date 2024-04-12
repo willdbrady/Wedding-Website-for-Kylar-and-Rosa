@@ -18,6 +18,11 @@ main {
   color: darkred;
 }
 
+main h1,
+main h2 {
+  text-align: center;
+}
+
 /* INFO styling */
 
 h1 {
@@ -136,7 +141,8 @@ form label {
   justify-content: center;
 }
 
-.formbuttons a {
+.formbuttons a,
+.homebutton a {
   display: inline;
   background-color: #F0F0F0;
   text-decoration: none;
@@ -149,6 +155,10 @@ form label {
   margin: 1rem;
   font-family: arial;
   font-size: 1.2rem;
+}
+
+.homebutton {
+  margin-bottom: 3rem;
 }
 
 #submitbutton {
@@ -186,4 +196,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .einfo {
+    width: 100vw;
+  }
 }
