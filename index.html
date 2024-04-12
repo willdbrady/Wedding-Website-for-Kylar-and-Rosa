@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./assets/icon.svg" type="svg">
   <title>RBMW-2020Something</title>
-  <link rel="stylesheet" href="style4.css">
+  <link rel="stylesheet" href="style5.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -45,7 +45,8 @@
             <ul class="navul">
               <li class="navli"><a href="#home">Home</a></li>
               <li class="navli"><a href="#ersvp">Engagement Party</a></li>
-              <li class="navli"><a href="#wrsvp">Wedding Day</a></li>
+              <li class="navli"><a href="#faqsec">FAQ</a></li>
+              <li class="navli"><a href="#wrsvp">Wedding Day & <br>Wedding Registry</a></li>
               <li class="navli"><a href="#photogallery">Photo Gallery</a></li>
             </ul>
           </div>
@@ -66,33 +67,11 @@
 
             </div>
           </div>
-          <h1 class="names">Rosa<br>and<br>Kylar</h1>
+          <h1 class="names">Rosa and Kylar<span class="namespan">To whatever end . . .</span></h1>
         </div>
       </div>
-      <div class="cloudsdiv">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-        <img src="./assets/cloud.webp" alt="" class="cloud">
-      </div>
       <section class="engagement-section" id="ersvp">
-        <div class="eswrapper">
+        <div class="eswrapper" id="esid">
           <div class="sidebyside">
             <div class="container">
               <h1 alt="Countdown headline" id="headline">Countdown to the engagement party!</h1>
@@ -107,51 +86,70 @@
               <h1>Date: August 11, 2024 <Br> @ 3PM EST</h1>
             </div>
             <div class="ersvp">
-              <h1 id="label">RSVP Below:</h1>
-              <form id="form" action="https://rbmw-2020something.com/db/process.php" method="post">
-                <input type="hidden" name="form_tools_form_id" value="3" />
-                <p>First Name (required):</p>
-                <input type="text" name="fName" id="fName" placeholder="John" required>
-                <p>Last Name (required):</p>
-                <input type="text" name="lName" id="lName" placeholder="Doe" required>
-                <p>How many additional guests will accompany you? (required):</p>
-                <input type="number" name="nGuests" id="" placeholder="0" required>
-                <p>Want to win a case of beer? Try to guess what RBMW 2020Something means. <br> Guess correctly to win
-                  (optional):
-                </p>
-                <input type="text" name="guess" id="guess" placeholder="RBMW 2020-Something">
-                <p>Send a note to the special couple (optional):</p>
-                <input type="text" name="message" id="message" placeholder="optional"> <br>
-                <input class="submitbutton" id="submitbutton" href="ersvp" type="submit" value="Submit">
-              </form>
-              <p class=" thankyoumessage" id="thankyoumessage">Thanks for your submission! Please make sure to read the
-                information below.
-              </p>
+              <h1 id="label">The party will be at:</h1>
+              <p>12147 Diehl dr., Sterling Heights, MI, 48313.</p>
             </div>
           </div>
+          <div class="buttonwrapper"><a href="rsvp.html" class="rsvpentrance">RSVP Now!</a></div>
           <div class=" einfo">
             <h1>Important information:</h1>
-            <p>The party will be at 12147 Diehl dr., Sterling Heights, MI, 48313. The bride and groom (to be) have
-              requested that people bring a "Marry Me" dish, which is basically
-              the
-              dish that you would make for someone to make them fall in love with you. Make sure to include a recipe
-              card that has step-by-step instructions and an incredients list. Due to this, gifts are not needed.
-              Burgers, hot dogs, and italian sausages will be provided. There will be a champagne toast, but
-              otherwise
-              it is BYOB. We will have water, juice, and soda for the guests. Dress code is comfy casual, but please
-              note that there will be photographs taken. There will be games and stuff to do throughout the event,
-              and
-              we will have a bonfire to close out the night for any night owls.</p>
+            <ul class="einfoul">
+              <li class="einfoli">The bride and groom (to be) have requested that people bring a "Marry Me" dish, which
+                is basically the dish that you would make for someone to make them fall in love with you. Make sure to
+                include a recipe card that has step-by-step instructions and an ingredients list.</li>
+              <li class="einfoli">Burgers, hot dogs, and italian sausages will be provided. </li>
+              <li class="einfoli">There will be a champagne toast, but otherwise it is BYOB.</li>
+              <li class="einfoli">We will have water, juice, and soda for the guests. </li>
+              <li class="einfoli">Dress code is comfy casual, but please note that there will be photographs taken.</li>
+              <li class="einfoli">There will be games and stuff to do throughout the event, and we will have a bonfire
+                to close out the night for any night owls.</li>
+            </ul>
           </div>
         </div>
       </section>
+      <section class="faqsection" id="faqsec">
+        <div class="fwrapper">
+          <h1>FAQ</h1>
+          <div class="accordion"><button class='menu'>Are children invited?<span class='arrow rarrow'>+</span><span
+                class='arrow darrow'>-</span></button>
+            <div class='panel close'>
+              <div style="padding:10px">We are more than happy to host children at the engagement party, but nobody
+                under the
+                age of 12 will be invited to the wedding.</div>
+            </div><button class='menu'>When do I need to RSVP by?<span class='arrow rarrow'>+</span><span
+                class='arrow darrow'>-</span></button>
+            <div class='panel close'>
+              <div style="padding:10px">We ask that everyone RSVPs for the engagement party by July 11th, 2024, and RSVP
+                for
+                the wedding one month before the wedding day. (TBD)</div>
+            </div><button class='menu'>Are the bride and groom accepting gifts at their wedding?<span
+                class='arrow rarrow'>+</span><span class='arrow darrow'>-</span></button>
+            <div class='panel close'>
+              <div style="padding:10px">They are! Please view their wishlist <a class="faq"
+                  href="#weddingregistry">here.</a></div>
+            </div>
+            <button class='menu'>Will there be a wedding shower?<span class='arrow rarrow'>+</span><span
+                class='arrow darrow'>-</span></button>
+            <div class='panel close'>
+              <div style="padding:10px">No, we would like to celebrate with all the people we love at the engagement
+                party,
+                and when it comes time for the wedding, we want to keep it very small and intimate.</div>
+            </div>
+          </div>
+      </section>
       <section class="weddingsection" id="wrsvp">
         <div class="eswrapper wswrapper">
-          <div class="weddinghalf">
-            <h1>Wedding Date: <br> TBD</h1>
+          <div class="wswrapper twohalves">
+            <div class="weddinghalf">
+              <h1>Wedding Date: <br> TBD</h1>
+            </div>
+            <div class="weddinghalf">
+              <h1>Come back later to RSVP!</h1>
+            </div>
           </div>
-          <div class="weddinghalf">
-            <h1>Come back later to RSVP!</h1>
+          <div class="weddingregistry" id="weddingregistry">
+            <h1>Want to send the bride and groom gifts?</h1>
+            <a href="https://www.amazon.com/">Here is a link to their Amazon registry. </a>
           </div>
         </div>
       </section>
@@ -173,7 +171,7 @@
 
 
   <!-- JavaScript File -->
-  <script src="script2.js">
+  <script src="script3.js">
   </script>
 </body>
 

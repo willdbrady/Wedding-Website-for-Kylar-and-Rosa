@@ -1,3 +1,18 @@
+::-webkit-scrollbar {
+  width: 15px;
+  transition-duration: .2s;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(51, 51, 51, 0.945);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c03e3e;
+  background: linear-gradient(#d45252, #cf0000, #d45252);
+  border-radius: 10px;
+}
+
 .contentdiv {
   display: flex;
   margin-left: 50%;
@@ -14,7 +29,7 @@
 }
 
 main {
-  background-color: #ff519f;
+  background-image: linear-gradient(rgb(255, 140, 230), rgb(255, 165, 0), rgb(255, 209, 156), rgb(94, 94, 255));
   min-height: 100vh;
   margin-top: 0px;
 }
@@ -23,9 +38,6 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/Cloudsbg.webp);
-  background-size: contain 100vh 100vw;
-  background-position: 0 -110px;
   margin-top: -18px;
   scroll-snap-align: start;
 }
@@ -97,10 +109,12 @@ main {
   color: #ffffff;
   font-weight: bold;
   display: block;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 5rem;
+  line-height: 1.7;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.201);
-  padding: 3rem;
-  border-radius: 5rem;
 }
 
 .nameswrapper {
@@ -109,6 +123,12 @@ main {
   justify-content: center;
   margin: auto;
   width: 100vw;
+}
+
+.namespan {
+  font-family: bad script;
+  font-size: 2rem;
+  display: block;
 }
 
 /* NAV CSS SECTION */
@@ -274,8 +294,6 @@ nav {
 
 .engagement-section {
   height: 100vh;
-  background-image: url(./assets/Cloudsbg.webp);
-  background-size: cover;
   display: flex;
   scroll-snap-align: start;
   justify-content: center;
@@ -300,6 +318,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .container {
@@ -307,18 +326,36 @@ nav {
 }
 
 
-.ersvp p {
+.ersvp h1 {
   padding: .5rem;
-  font-size: 1.1rem;
+  font-size: 2.5rem;
 }
 
-.submitbutton {
-  padding: .3rem;
-  margin: .5rem;
+.ersvp p {
+  padding: 1.5rem;
+  font-size: 1.9rem;
 }
 
-.thankyoumessage {
-  display: none;
+#esid {
+  height: 90vh;
+}
+
+.buttonwrapper {
+  display: flex;
+  margin: 2vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.rsvpentrance {
+  text-decoration: none;
+  color: white;
+  border: 2px solid;
+  border-radius: 2rem;
+  border-width: 4px;
+  padding: 1rem;
+  font-size: 3rem;
+  display: inline-block;
 }
 
 .einfo {
@@ -328,8 +365,105 @@ nav {
   flex-direction: column;
   padding-left: 5rem;
   padding-right: 5rem;
-  padding-top: 1rem;
+  padding-bottom: 3rem;
   font-size: 1.5rem;
+  width: 100%;
+}
+
+.einfo ul {
+  list-style-position: inside;
+}
+
+/* FAQ Section */
+
+.faqsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fwrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.201);
+  border-radius: 5rem;
+  width: 90vw;
+  padding-bottom: 1rem;
+}
+
+.fwrapper h1 {
+  padding: .5rem;
+  font-size: 2.5rem;
+}
+
+/* Accordion cleanup */
+
+.accordion {
+  width: 50vw;
+  font-family: alegreya sans;
+}
+
+.accordion a {
+  color: rgb(187, 187, 187);
+}
+
+.accordion .menu {
+  background-color: #d5d5d5;
+  color: #444;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  margin-top: 4px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.accordion .panel {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.201);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.accordion .open {
+  display: block;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.accordion .close {
+  display: none
+}
+
+.accordion .active {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.accordion .arrow {
+  float: right;
+  display: block
+}
+
+.accordion .darrow {
+  display: none
+}
+
+.accordion .active .darrow {
+  display: block
+}
+
+.accordion .active .rarrow {
+  display: none
 }
 
 /* wedding section */
@@ -345,19 +479,40 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.twohalves {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
+  height: 30%;
+  width: 100%;
+  margin-bottom: 10%;
 }
 
 .weddinghalf h1 {
-  width: 10%;
+  width: 100%;
 }
 
 .weddinghalf {
   width: 50%;
-  height: 30%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+}
+
+.weddingregistry {
+  color: white;
+}
+
+.weddingregistry a,
+.weddingregistry h1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   color: white;
 }
 
@@ -480,10 +635,10 @@ footer {
 }
 
 footer p {
-    font-size: .5rem;
+  font-size: .5rem;
 }
 
-/* clouds section */
+/* previous cloudwork leftovers */
 
 html,
 body {
@@ -493,150 +648,6 @@ body {
 body {
   position: relative;
 }
-
-.cloudsdiv {
-  position: absolute;
-  width: 100vw;
-}
-
-.cloud {
-  position: absolute;
-  transition: ease-in;
-  animation: clouddivider 5s infinite linear;
-  animation-delay: 0ms;
-}
-
-.cloud:nth-child(1) {
-  top: -15vh;
-  width: 25vw;
-  left: 10vw;
-}
-
-.cloud:nth-child(2) {
-  width: 70vw;
-  top: -40vh;
-  left: 0vw;
-}
-
-.cloud:nth-child(3) {
-  width: 50vw;
-  top: -15vh;
-  left: 50vw;
-}
-
-.cloud:nth-child(4) {
-  width: 35vw;
-  top: -15vh;
-  left: 35vw;
-}
-
-.cloud:nth-child(5) {
-  width: 30vw;
-  top: -15vh;
-  left: 30vw;
-}
-
-.cloud:nth-child(6) {
-  width: 30vw;
-  top: -15vh;
-  left: 75vw;
-}
-
-.cloud:nth-child(7) {
-  width: 30vw;
-  top: -15vh;
-  left: 75vw;
-}
-
-.cloud:nth-child(8) {
-  width: 30vw;
-  top: -15vh;
-  left: 65vw;
-}
-
-.cloud:nth-child(9) {
-  width: 30vw;
-  top: -15vh;
-  left: 60vw;
-}
-
-.cloud:nth-child(10) {
-  width: 25vw;
-  top: -10vh;
-  left: -7vw;
-}
-
-.cloud:nth-child(11) {
-  top: -15vh;
-  width: 25vw;
-  left: -90vw;
-}
-
-.cloud:nth-child(12) {
-  width: 70vw;
-  top: -40vh;
-  left: -100vw;
-}
-
-.cloud:nth-child(13) {
-  width: 50vw;
-  top: -15vh;
-  left: -50vw;
-}
-
-.cloud:nth-child(14) {
-  width: 35vw;
-  top: -15vh;
-  left: -65vw;
-}
-
-.cloud:nth-child(15) {
-  width: 30vw;
-  top: -15vh;
-  left: -70vw;
-}
-
-.cloud:nth-child(16) {
-  width: 30vw;
-  top: -15vh;
-  left: -25vw;
-}
-
-.cloud:nth-child(17) {
-  width: 30vw;
-  top: -15vh;
-  left: -25vw;
-}
-
-.cloud:nth-child(18) {
-  width: 30vw;
-  top: -15vh;
-  left: -35vw;
-}
-
-.cloud:nth-child(19) {
-  width: 30vw;
-  top: -15vh;
-  left: -40vw;
-}
-
-.cloud:nth-child(20) {
-  width: 25vw;
-  top: -10vh;
-  left: -107vw;
-}
-
-@keyframes clouddivider {
-  from {
-    transform:
-      translateX(0);
-  }
-
-  to {
-    transform: translateX(100vw);
-  }
-}
-
 
 /* ------------------- RESPONSIVE STUFF BELOW ------------------- */
 
@@ -693,6 +704,10 @@ body {
     font-size: 1.1rem;
   }
 
+  .buttonwrapper {
+    margin: 0;
+  }
+
 }
 
 /* 650 W to fix RSVP menu item sizes YET AGAIN */
@@ -731,6 +746,17 @@ body {
   }
 }
 
+@media screen and (max-width: 1174px) {
+  .engagement-section {
+    height: 140vh;
+  }
+
+
+  #esid {
+    height: 135vh;
+  }
+}
+
 @media screen and (max-width: 860px) {
   .container ul li {
     font-size: 1.1rem;
@@ -752,10 +778,6 @@ body {
     border-right: 0px;
   }
 
-  .eswrapper {
-    height: 95vh;
-  }
-
   .einfo {
     padding-top: 10px;
     padding-left: 10px;
@@ -764,13 +786,6 @@ body {
 
   .gallery p {
     font-size: 1.5rem;
-  }
-  .engagement-section {
-    height: 140vh;
-  }
-
-  .engagement-section .eswrapper {
-    height: 135vh;
   }
 }
 
@@ -799,11 +814,60 @@ body {
     height: 170vh;
   }
 
-  .weddingsection {
-    height: 65vh;
+  .names {
+    font-size: 2.5rem;
   }
 
-  .weddingsection .wswrapper {
-    height: 50%;
+  .namespan {
+    font-size: 1.5rem;
+  }
+
+  .nav-logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  nav {
+    vertical-align: middle;
+  }
+
+  .pswrapper {
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .einfo {
+    padding-top: 5vh;
+  }
+
+  .engagement-section {
+    height: 190vh;
+  }
+
+  #esid {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    height: 180vh;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .names {
+    font-size: 2.2rem;
+  }
+
+  .namespan {
+    font-size: 1.2rem;
+  }
+
+  .einfo {
+    padding-top: 10vh;
+  }
+
+
+  #esid {
+    padding-top: 40vh;
+    padding-bottom: 40vh;
   }
 }

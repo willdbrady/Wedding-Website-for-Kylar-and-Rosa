@@ -1,0 +1,189 @@
+/* Page styling */
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: antiquewhite;
+  min-height: 100vh;
+  font-family: Merriweather;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: darkred;
+}
+
+/* INFO styling */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  margin: .2rem;
+}
+
+.einfo ul li {
+  color: black;
+}
+
+.einfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: .2rem;
+  font-size: 1.2rem;
+  width: 50vw;
+  text-align: center;
+}
+
+.einfo ul {
+  list-style-position: inside;
+}
+
+/* FAQ Styling */
+
+.accordion {
+  width: 50vw;
+}
+
+.accordion .menu {
+  background-color: #d5d5d5;
+  color: #444;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  margin-top: 4px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.accordion .panel {
+  background-color: #FFFFFF;
+  color: #000000;
+  overflow: hidden
+}
+
+.accordion .open {
+  display: block
+}
+
+.accordion .close {
+  display: none
+}
+
+.accordion .active {
+  background-color: darkred;
+  color: #fff
+}
+
+.accordion .arrow {
+  float: right;
+  display: block
+}
+
+.accordion .darrow {
+  display: none
+}
+
+.accordion .active .darrow {
+  display: block
+}
+
+.accordion .active .rarrow {
+  display: none
+}
+
+/* Form styling */
+
+form input,
+form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+form input,
+form select {
+  margin: auto;
+  border-radius: 2rem;
+  padding: .5rem;
+  border: solid;
+  border-width: 1px;
+}
+
+
+form label {
+  text-align: center;
+}
+
+.formbuttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.formbuttons a {
+  display: inline;
+  background-color: #F0F0F0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 2rem;
+  padding: .5rem;
+  border: solid;
+  border-width: 1px;
+  margin: 1rem;
+  font-family: arial;
+  font-size: 1.2rem;
+}
+
+#submitbutton {
+  margin: 1rem;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Additional guests collapsing forms (needs cleanup) */
+
+.additionalguest {
+  display: none;
+}
+
+/* remove up and down arrows from number field */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* footer section */
+footer {
+  background-color: #0a0a0a;
+  color: white;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
