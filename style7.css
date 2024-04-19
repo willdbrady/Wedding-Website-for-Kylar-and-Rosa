@@ -105,7 +105,7 @@ main {
 
 .names {
   font-family: bad script;
-  font-size: 5rem;
+  font-size: 12rem;
   color: #ffffff;
   font-weight: bold;
   display: block;
@@ -113,8 +113,6 @@ main {
   padding-right: 3rem;
   border-radius: 5rem;
   line-height: 1.7;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.201);
 }
 
 .nameswrapper {
@@ -123,12 +121,6 @@ main {
   justify-content: center;
   margin: auto;
   width: 100vw;
-}
-
-.namespan {
-  font-family: bad script;
-  font-size: 2rem;
-  display: block;
 }
 
 /* NAV CSS SECTION */
@@ -368,6 +360,7 @@ nav {
   padding-bottom: 3rem;
   font-size: 1.5rem;
   width: 100%;
+  text-align: left;
 }
 
 .einfo ul {
@@ -466,6 +459,15 @@ nav {
   display: none
 }
 
+/* Registry section */
+
+.regsection a,
+.regsection h1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+}
+
 /* wedding section */
 .weddingsection {
   display: flex;
@@ -489,7 +491,6 @@ nav {
   flex-direction: row;
   height: 30%;
   width: 100%;
-  margin-bottom: 10%;
 }
 
 .weddinghalf h1 {
@@ -502,17 +503,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-}
-
-.weddingregistry {
-  color: white;
-}
-
-.weddingregistry a,
-.weddingregistry h1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   color: white;
 }
 
@@ -613,13 +603,6 @@ nav {
   }
 }
 
-/* this small snippet deals with background images for final 2 sections */
-.weddingsection,
-.photosection {
-  background-image: url(./assets/leaves.webp);
-  background-repeat: repeat;
-}
-
 .weddingsection {
   background-position-y: 320px;
 }
@@ -632,6 +615,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 footer p {
@@ -679,6 +663,18 @@ body {
 
 }
 
+@media screen and (max-width: 1222px) {
+  .names {
+    font-size: 9rem;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  .names {
+    font-size: 7rem;
+  }
+}
+
 /* 892 W to fix RSVP menu item sizes again AND to fix ERSVP section*/
 
 @media screen and (max-width: 892px) {
@@ -702,6 +698,7 @@ body {
 
   .einfo {
     font-size: 1.1rem;
+    padding-top: 0px;
   }
 
   .buttonwrapper {
@@ -787,6 +784,10 @@ body {
   .gallery p {
     font-size: 1.5rem;
   }
+
+  .names {
+    font-size: 5rem;
+  }
 }
 
 /* continuing mobile proofing */
@@ -815,11 +816,7 @@ body {
   }
 
   .names {
-    font-size: 2.5rem;
-  }
-
-  .namespan {
-    font-size: 1.5rem;
+    font-size: 4rem;
   }
 
   .nav-logo {
@@ -836,7 +833,19 @@ body {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 477px) {
+  .names {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .einfo {
+    padding-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 378px) {
   .einfo {
     padding-top: 5vh;
   }
@@ -850,6 +859,10 @@ body {
     padding-bottom: 20vh;
     height: 180vh;
   }
+
+  .names {
+    font-size: 2.6rem;
+  }
 }
 
 @media screen and (max-width: 345px) {
@@ -857,12 +870,8 @@ body {
     font-size: 2.2rem;
   }
 
-  .namespan {
-    font-size: 1.2rem;
-  }
-
   .einfo {
-    padding-top: 10vh;
+    padding-top: 0vh;
   }
 
 

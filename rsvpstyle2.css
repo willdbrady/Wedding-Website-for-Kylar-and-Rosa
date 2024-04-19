@@ -45,11 +45,12 @@ h2 {
   margin: .2rem;
   font-size: 1.2rem;
   width: 50vw;
-  text-align: center;
+  text-align: left;
 }
 
 .einfo ul {
   list-style-position: inside;
+  padding-left: 0px;
 }
 
 /* FAQ Styling */
@@ -196,6 +197,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
